@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica;
+}
+
+.header {
+  background-color: #0984e3; /* Altera a cor de fundo */
+  padding: 3rem; /* Adiciona um espaçamento interno */
+  margin: 0.5rem; /* Adiciona um espaçamento externo */
+  color: white; /* Cor do texto */
+  text-align: center; /* Alinhamento dos itens no centro da tela */
+}
+
+h1 {
+  padding-bottom: 3rem;
+}
+
+input {
+  margin: 0; /* Retira as margens */
+  border: none; /* Retira todas as bordas */
+  border-radius: 0; /* Retira todo arredondamento padrão das bordas */
+  width: 75%; /* Faz ele ocupar 75% da largura do article */
+  padding: 0.6rem; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte dentro do input */
+  outline: none; /* Tira toda borda quando ele for focado */
+}
+
+#addBtn {
+  padding: 0.6rem; /* Espaçamento interno */
+  width: 25%; /* Faz ele ocupar 25% da largura do article */
+  background: #d9d9d9; /* Altera a cor de fundo */
+  color: #555; /* Cor do texto */
+  text-align: center; /* Alinhamento do texto no centro */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  cursor: pointer; /* Garantir que o cursor do mouse ao passar por ele será de click */
+  transition: 0.3s; /* Tempo de transição para quando realizarmos algum efeito no botão*/
+  border-radius: 0; /* Retira todo arredondamento padrão das bordas */
+  border: none; /* Retira todas as bordas */
+  outline: none; /* Tira toda borda quando ele for clicado */
+}
+
+#addBtn:hover {
+  background-color: #bbb; /* Quando passar o mouse no botão, muda o background */
+}
+
+.flex {
+  display: flex;
+}
+
+#tasks {
+  margin: 0.5rem; /* Mesma margem do header na section que envolve a lista */
+}
+
+ul {
+  list-style: none; /* Retira os pontos da lista */
+}
+
+ul li {
+  cursor: pointer; /* Garantir que o cursor do mouse ao passar por cada item na lista será de click */
+  position: relative; /* Posição relativa ao elemento before que iremos adicionar mais em baixo */
+  padding: 12px 8px 12px 40px; /* Espaçamento na ordem: top, right, down, left */
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through; /* Risco em cima do texto */
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border: #fff solid;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 7px;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
