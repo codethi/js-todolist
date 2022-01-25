@@ -39,7 +39,7 @@ btnAdd.addEventListener("click", function () {
 const list = document.querySelector("ul"); // Captura a lista inteira
 
 // Ao clicar na lista a minha função recebe um evento
-list.addEventListener("click", function (ev) {
+list.addEventListener("click",  (ev) => {
   // Se o nome do item que eu cliquei na lista foi "LI"
   if (ev.target.nodeName === "LI") {
     ev.target.classList.toggle("checked"); // Adiciona nesse elemento a classe "checked"
